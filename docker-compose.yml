@@ -1,0 +1,15 @@
+services:
+  devcontainer:
+    build: .
+    container_name: devcontainer
+    tty: true
+    stdin_open: true
+    restart: always
+
+    volumes:
+      - type: bind
+        source: C:/Users/<user>/devcontainer/home/history.zsh_history
+        target: /home/<user>/.zsh_history
+      - type: bind 
+        source: C:/Users/<user>/dev
+        target: /home/<user>/dev
